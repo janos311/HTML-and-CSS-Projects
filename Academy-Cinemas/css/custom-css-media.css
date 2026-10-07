@@ -1,0 +1,62 @@
+@media screen and (max-width: 991.98px) {
+    .navbar {
+        height: auto;
+        min-height: 100px;
+    }
+
+    .navbar-collapse {
+        background-color: transparent;
+        border-top: 5px solid rgb(98, 0, 0);
+        margin-right: -0.75rem;
+        margin-left: -0.75rem;
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
+    }
+
+    .navbar-nav .dropdown-menu {
+        display: block;
+        position: static;
+        width: 100%;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+        background-color: transparent;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-0.5rem);
+        visibility: hidden;
+        transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.35s ease, visibility 0s linear 0.35s;
+    }
+
+    .navbar-nav .dropdown-menu.show {
+        max-height: 20rem;
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        transition-delay: 0s;
+    }
+
+    .navbar-nav .dropdown-item {
+        padding-left: 2.5rem;
+        color: var(--main-color-accent);
+    }
+
+    .navbar-nav .dropdown-item:hover,
+    .navbar-nav .dropdown-item:focus {
+        color: var(--accent-text-color);
+        background-color: transparent;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar-nav .dropdown-menu {
+        transition: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        scroll-padding-top: 550px;
+    }
+}
